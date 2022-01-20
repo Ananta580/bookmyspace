@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "522108700851",
+    "project_id": "bookmyspace-9203a",
+    "storage_bucket": "bookmyspace-9203a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:522108700851:android:51e919449b4a0f69f088c6",
+        "android_client_info": {
+          "package_name": "com.example.bookmyspace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "522108700851-30tdrke7rh2dhoq5b1uvvp2t51n7bvnl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bookmyspace",
+            "certificate_hash": "b535415b80db30b0465f64d71433f06ab2800488"
+          }
+        },
+        {
+          "client_id": "522108700851-osqt0b9egicav0rc5ughkpaf5q73csv9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD74Z7RV4FCuezw6OIarN3waDGHFI4sl3M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "522108700851-osqt0b9egicav0rc5ughkpaf5q73csv9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "522108700851-dnfugfm3l7ncr0k6gd3dbd3gmqto5fq3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.bookmyspace"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
