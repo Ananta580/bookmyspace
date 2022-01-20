@@ -77,6 +77,8 @@ class AuthProvider {
 
   void signOut() async {
     try {
+      SharedPreferences prefs = await SharedPreferences.getInstance();
+      await prefs.remove('user');
       var _googleSignIn = GoogleSignIn();
       await _googleSignIn.signOut();
       await _auth.signOut();

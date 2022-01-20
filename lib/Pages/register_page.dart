@@ -72,6 +72,7 @@ class _RegisterPageState extends State<RegisterPage> {
                               padding: const EdgeInsets.all(10),
                               child: TextField(
                                 controller: _passwordController,
+                                obscureText: true,
                                 decoration: const InputDecoration(
                                   hintText: "Password",
                                   hintStyle: TextStyle(color: Colors.grey),
@@ -82,6 +83,7 @@ class _RegisterPageState extends State<RegisterPage> {
                               padding: const EdgeInsets.all(10),
                               child: TextField(
                                 controller: _confirmPasswordController,
+                                obscureText: true,
                                 decoration: const InputDecoration(
                                   hintText: "Confirm Password",
                                   hintStyle: TextStyle(color: Colors.grey),

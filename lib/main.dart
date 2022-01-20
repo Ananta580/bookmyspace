@@ -1,9 +1,9 @@
 import 'package:bookmyspace/Pages/home_page.dart';
 import 'package:bookmyspace/Pages/login_page.dart';
 import 'package:bookmyspace/Pages/register_page.dart';
-import 'package:bookmyspace/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -13,9 +13,28 @@ void main() async {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
-  // This widget is the root of your application.
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  late List<String> user = [];
+  @override
+  initState() {
+    getUser();
+    super.initState();
+  }
+
+  Future getUser() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      user = prefs.getStringList('user')!;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,7 +48,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
       ),
-      home: const LoginPage(),
+      home: user.isEmpty ? const LoginPage() : const MyHomePage(),
     );
   }
 }
